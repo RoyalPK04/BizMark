@@ -286,7 +286,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.75);
+		color: rgb(255, 255, 255);
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 1rem;
 		font-weight: 300;
@@ -2653,7 +2653,7 @@ input, select, textarea {
 		}
 
 		.panel.small .span-7, .panel.medium .span-7, .panel.large .span-7 {
-			width: 70%;
+			width: 95%;
 		}
 
 		.panel.small .span-7-25, .panel.medium .span-7-25, .panel.large .span-7-25 {
@@ -3385,6 +3385,7 @@ input, select, textarea {
 		-ms-align-items: -ms-stretch;
 		align-items: stretch;
 		position: relative;
+		overflow: -moz-hidden-unscrollable;
 	}
 
 		.panel.spotlight > * {
@@ -3404,9 +3405,63 @@ input, select, textarea {
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
 			justify-content: center;
-			padding: 3.5rem 3.5rem 2rem 3.5rem ;
+			padding: 5.5rem 7rem 2rem 6rem;
 		}
 
+		.panel.spotlight .content1 {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			padding: 7rem 0rem 4rem 8rem;
+		}
+
+		.panel.spotlight .content2 {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			padding: 7rem 8rem 4rem 2rem;
+		}
+
+		.panel.spotlight .image_main {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+		}
+
+		.panel.spotlight .image_main img {
+			-moz-object-fit: cover;
+			-webkit-object-fit: cover;
+			-ms-object-fit: cover;
+			object-fit: cover;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
 		.panel.spotlight .image {
 			position: absolute;
 			top: 0;
@@ -3428,6 +3483,75 @@ input, select, textarea {
 				width: 100%;
 				height: 100%;
 			}
+	/* Media query for mobile devices with a maximum width of 767px */
+@media (max-width: 767px) {
+    .panel.spotlight {
+        overflow: hidden; /* Prevent scrolling within the container */
+    }
+
+    .panel.spotlight .image {
+        position: absolute;
+        top: 0; /* Keep the top value as 0 */
+        left: -10px; /* Adjusted value */
+        width: 266%;
+        height: 136%;
+        z-index: 0;
+    }
+
+    /* Adjusted styles for gs.jpg on mobile */
+    .panel.spotlight .image.filtered.tinted.gs-image {
+        position: absolute;
+        top: -14px; /* Your desired value */
+        left: 0;
+        width: 244%;
+        height: 126%;
+        z-index: 0;
+    }
+
+    /* Adjusted styles for mmania.jpg on mobile */
+    .panel.spotlight .image.filtered.tinted.mmania-image {
+        position: absolute;
+        top: -200px; /* Your desired value */
+        left: 0;
+        width: 112%;
+        height: 174%;
+        z-index: 0;
+    }
+
+	/* Adjusted styles for gs.jpg on mobile */
+    .panel.spotlight .image.filtered.tinted.ipl-image {
+        position: absolute;
+        top: -14px; /* Your desired value */
+        left: 0;
+        width: 304%;
+        height: 139%;
+        z-index: 0;
+    }
+
+    /* Adjusted styles for mmania.jpg on mobile */
+    .panel.spotlight .image.filtered.tinted.bplan-image {
+        position: absolute;
+        top: -200px; /* Your desired value */
+        left: 0;
+        width: 115%;
+        height: 143%;
+        z-index: 0;
+    }
+
+    .panel.spotlight .image img {
+        -moz-object-fit: cover;
+        -webkit-object-fit: cover;
+        -ms-object-fit: cover;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+		
 
 		.panel.spotlight.left {
 			-moz-justify-content: -moz-flex-start;
@@ -3454,7 +3578,7 @@ input, select, textarea {
 	@media screen and (max-width: 736px) {
 
 		.panel.spotlight .content {
-			padding: 2.8875rem 1.75rem 1.3875rem 1.75rem ;
+			padding: 7.8875rem 2.75rem 1.3875rem 4rem ;
 			-moz-flex-direction: column !important;
 			-webkit-flex-direction: column !important;
 			-ms-flex-direction: column !important;
@@ -3700,7 +3824,7 @@ input, select, textarea {
 	width: 100%;
 	height: 100%;
 	background-color: #181717; /* Customize background color */
-	opacity: 0.7; /* Customize opacity */
+	opacity: 1; /* Customize opacity */
 	z-index: -1; /* Place behind carousel items */
   }
 
