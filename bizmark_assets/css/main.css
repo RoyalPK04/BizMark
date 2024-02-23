@@ -3503,7 +3503,7 @@ input, select, textarea {
         position: absolute;
         top: -14px; /* Your desired value */
         left: 0;
-        width: 244%;
+        width: 277%;
         height: 126%;
         z-index: 0;
     }
@@ -3523,7 +3523,7 @@ input, select, textarea {
         position: absolute;
         top: -14px; /* Your desired value */
         left: 0;
-        width: 304%;
+        width: 338%;
         height: 139%;
         z-index: 0;
     }
